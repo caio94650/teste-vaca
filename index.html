@@ -17,7 +17,7 @@
       background: #fff;
       padding: 10px 20px;
       border-bottom: 1px solid #ddd;
-      position: fixed;     /* fixa no topo */
+      position: fixed;
       top: 0;
       left: 0;
       width: 100%;
@@ -26,12 +26,12 @@
       align-items: center;
     }
     header img {
-      max-height: 40px; /* altura da logo */
+      max-height: 40px;
     }
     .container {
       width: 95%;
       max-width: 600px;
-      margin: 80px auto 20px; /* margem maior por causa do header fixo */
+      margin: 80px auto 20px;
       background: #fff;
       padding: 20px;
       border-radius: 8px;
@@ -103,6 +103,55 @@
     .btn-anon:hover {
       background: #333;
     }
+
+    /* Rodapé preto */
+    footer {
+      background: #000;
+      color: #fff;
+      margin-top: 2rem;
+      padding: 2rem 1rem 1rem 1rem;
+    }
+    footer h4 {
+      margin: 0 0 10px 0;
+      font-size: 16px;
+      color: #fff;
+    }
+    footer a {
+      color: #aaa;
+      text-decoration: none;
+      font-size: 14px;
+      display: block;
+      margin-bottom: 6px;
+    }
+    footer a:hover {
+      color: #fff;
+    }
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    .footer-col {
+      flex: 1;
+      min-width: 150px;
+      margin: 0 1rem 1rem 0;
+    }
+    .copyright {
+      text-align: center;
+      padding: 1rem;
+      border-top: 1px solid #222;
+      margin-top: 1rem;
+      font-size: 14px;
+      color: #aaa;
+    }
+    @media(max-width:600px) {
+      .footer-content {
+        flex-direction: column;
+      }
+      .footer-col {
+        margin-right: 0;
+      }
+    }
   </style>
 </head>
 <body>
@@ -164,7 +213,50 @@
 
     <!-- Botão de doação anônima -->
     <a href="checkout.php?anonima=true" class="btn-anon">🙈 Fazer Doação Anônima</a>
-
   </div>
+
+  <!-- Rodapé -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-col">
+        <h4>Links rápidos</h4>
+        <a href="#">Quem somos</a>
+        <a href="#">Vaquinhas</a>
+        <a href="#">Criar vaquinhas</a>
+        <a href="#">Login</a>
+        <a href="#">Vaquinhas mais amadas</a>
+        <a href="#">Política de privacidade</a>
+        <a href="#">Termos de uso</a>
+      </div>
+      <div class="footer-col">
+        <h4>Dúvidas</h4>
+        <a href="#">Dúvidas frequentes</a>
+        <a href="#">Taxas e prazos</a>
+        <a href="#">Loja de corações</a>
+        <a href="#">Vakinha Premiada</a>
+        <a href="#">Blog do Vakinha</a>
+        <a href="#">Segurança e transparência</a>
+        <a href="#">Busca por recibo</a>
+      </div>
+      <div class="footer-col">
+        <h4>Fale conosco</h4>
+        <a href="#">Clique aqui para falar conosco</a>
+        <p style="margin-top:10px; font-size:13px;">
+          De Segunda à Sexta<br>
+          Das 9:30 às 17:00
+        </p>
+        <img src="img/selo_seguranca.webp" alt="Selo de Segurança" style="margin-top:10px;max-width:100px;">
+      </div>
+      <div class="footer-col">
+        <h4>Baixe nosso App</h4>
+        <a href="#"><img src="img/google_play.svg" alt="Google Play"></a>
+        <a href="#"><img src="img/apple_store.svg" alt="Apple Store"></a>
+      </div>
+    </div>
+    <div class="copyright">
+      © 2025 - Todos direitos reservados
+    </div>
+  </footer>
+
 </body>
 </html>
