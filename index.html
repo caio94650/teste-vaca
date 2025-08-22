@@ -12,14 +12,25 @@
       background: #f9f9f9;
       color: #333;
       line-height: 1.6;
+      display: flex;
+      justify-content: center;
+    }
+
+    /* WRAPPER CENTRALIZADO */
+    .page-wrapper {
+      width: 100%;
+      max-width: 438px; /* largura fixa */
+      background: #f9f9f9;
     }
 
     /* HEADER RESPONSIVO */
     .topo {
       position: fixed;
       top: 0;
-      left: 0;
+      left: 50%;
+      transform: translateX(-50%);
       width: 100%;
+      max-width: 438px;
       background: #fff;
       border-bottom: 1px solid #ddd;
       display: flex;
@@ -44,22 +55,22 @@
 
     /* BLOCO DE TÍTULO DA CAMPANHA */
     .campanha-header {
-      max-width: 600px;
+      text-align: center;
       margin: 80px auto 10px;
-      padding: 0 20px;
+      padding: 0 10px;
     }
     .campanha-header p {
       margin: 0;
     }
     .campanha-header h1 {
-      font-size: 22px;
+      font-size: 20px;
       margin: 5px 0;
     }
 
     /* CONTEÚDO */
     .container {
-      width: 95%;
-      max-width: 600px;
+      width: 100%;
+      max-width: 438px;
       margin: 10px auto 20px;
       background: #fff;
       padding: 20px;
@@ -135,12 +146,13 @@
       background: #333;
     }
 
-    /* RODAPÉ RESPONSIVO */
+    /* RODAPÉ */
     footer {
       background: #222;
       color: #fff;
       margin-top: 2rem;
       width: 100%;
+      max-width: 438px;
     }
     footer h4 {
       margin: 0 0 10px 0;
@@ -158,8 +170,6 @@
       color: #fff;
     }
     .footer-top {
-      max-width: 1100px;
-      margin: auto;
       padding: 2rem 1rem;
     }
     .footer-header {
@@ -193,145 +203,141 @@
     }
 
     /* RESPONSIVIDADE */
-    @media(max-width:600px) {
-      .acoes {
-        gap: 10px;
-      }
+    @media(max-width:500px) {
       .footer-content {
         flex-direction: column;
-      }
-      .footer-col {
-        margin-right: 0;
       }
     }
   </style>
 </head>
 <body>
-  <!-- HEADER -->
-  <header class="topo">
-    <div class="logo">
-      <img src="https://i.ibb.co/PnPgF0w/photo-2025-08-22-03-06-52.jpg" alt="Vakinha Logo">
-    </div>
-    <div class="acoes">
-      <img src="https://cdn-icons-png.flaticon.com/512/622/622669.png" alt="Buscar" class="icon">
-      <img src="https://cdn-icons-png.flaticon.com/512/1828/1828859.png" alt="Menu" class="icon">
-    </div>
-  </header>
+  <div class="page-wrapper">
+    <!-- HEADER -->
+    <header class="topo">
+      <div class="logo">
+        <img src="https://i.ibb.co/PnPgF0w/photo-2025-08-22-03-06-52.jpg" alt="Vakinha Logo">
+      </div>
+      <div class="acoes">
+        <img src="https://cdn-icons-png.flaticon.com/512/622/622669.png" alt="Buscar" class="icon">
+        <img src="https://cdn-icons-png.flaticon.com/512/1828/1828859.png" alt="Menu" class="icon">
+      </div>
+    </header>
 
-  <!-- TÍTULO DA CAMPANHA -->
-  <div class="campanha-header">
-    <p style="color:#777; font-size:14px;">SAÚDE / TRATAMENTOS</p>
-    <h1>Pela continuidade do meu tratamento</h1>
-    <p style="color:#aaa; font-size:13px;">ID: ywj6xhxyu2</p>
+    <!-- TÍTULO DA CAMPANHA -->
+    <div class="campanha-header">
+      <p style="color:#777; font-size:14px;">SAÚDE / TRATAMENTOS</p>
+      <h1>Pela continuidade do meu tratamento</h1>
+      <p style="color:#aaa; font-size:13px;">ID: ywj6xhxyu2</p>
+    </div>
+
+    <!-- CONTEÚDO -->
+    <div class="container">
+      <div class="img-box">
+        <img src="sua-imagem.jpg" alt="Imagem da campanha">
+      </div>
+
+      <div class="progress">
+        <div class="progress-bar">
+          <div class="progress-fill"></div>
+        </div>
+        <p class="value">R$ 1.924,55 de R$ 6.000,00 (33,27%)</p>
+      </div>
+
+      <h2>🙏 Olá, meu nome é Ana Paula, tenho 41 anos</h2>
+      <p>
+        Em 2022 enfrentei um câncer de mama e terminei o tratamento em 2024.  
+        Infelizmente, este ano fui diagnosticada com <strong>metástase óssea</strong>, que atingiu meu osso da bacia.  
+        Precisei colocar uma prótese e, por orientação médica, não posso apoiar o pé no chão por 3 meses.  
+      </p>
+      <p>
+        Moro em um local de difícil acesso, com subida/descida íngreme, e para continuar indo ao hospital preciso construir um pequeno elevador de acesso.
+      </p>
+
+      <h3>Como será usado o valor arrecadado?</h3>
+      <ul>
+        <li>🛠️ Construção do elevador de acesso</li>
+        <li>🔌 Adequações elétricas e de segurança</li>
+        <li>🚐 Transporte para quimioterapia e consultas</li>
+        <li>💊 Medicamentos e curativos</li>
+        <li>♿ Equipamentos de apoio (cadeira de rodas, almofadas etc.)</li>
+      </ul>
+
+      <h3>Como você pode ajudar?</h3>
+      <p>Se 240 pessoas doarem R$100, consigo seguir o tratamento com segurança. 🙏</p>
+
+      <!-- BOTÕES DE VALORES -->
+      <div class="btn-grid">
+        <a href="checkout.php?valor=30" class="btn">R$30</a>
+        <a href="checkout.php?valor=40" class="btn">R$40</a>
+        <a href="checkout.php?valor=50" class="btn">R$50</a>
+        <a href="checkout.php?valor=60" class="btn">R$60</a>
+        <a href="checkout.php?valor=70" class="btn">R$70</a>
+        <a href="checkout.php?valor=80" class="btn">R$80</a>
+        <a href="checkout.php?valor=100" class="btn">R$100</a>
+        <a href="checkout.php?valor=150" class="btn">R$150</a>
+        <a href="checkout.php?valor=200" class="btn">R$200</a>
+        <a href="checkout.php?valor=300" class="btn">R$300</a>
+        <a href="checkout.php?valor=400" class="btn">R$400</a>
+        <a href="checkout.php?valor=500" class="btn">R$500</a>
+        <a href="checkout.php?valor=750" class="btn">R$750</a>
+        <a href="checkout.php?valor=1000" class="btn">R$1000</a>
+      </div>
+
+      <!-- BOTÃO DOAÇÃO ANÔNIMA -->
+      <a href="checkout.php?anonima=true" class="btn-anon">🙈 Fazer Doação Anônima</a>
+    </div>
+
+    <!-- RODAPÉ -->
+    <footer>
+      <div class="footer-top">
+        <!-- logo + redes sociais -->
+        <div class="footer-header">
+          <img src="https://i.ibb.co/PnPgF0w/photo-2025-08-22-03-06-52.jpg" alt="Vakinha Logo" style="max-height:40px;">
+          <div class="footer-social">
+            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"></a>
+            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968764.png" alt="Facebook"></a>
+            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube"></a>
+          </div>
+        </div>
+
+        <!-- colunas -->
+        <div class="footer-content">
+          <div class="footer-col">
+            <h4>Links rápidos</h4>
+            <a href="#">Quem somos</a>
+            <a href="#">Vaquinhas</a>
+            <a href="#">Criar vaquinhas</a>
+            <a href="#">Login</a>
+            <a href="#">Vaquinhas mais amadas</a>
+            <a href="#">Política de privacidade</a>
+            <a href="#">Termos de uso</a>
+          </div>
+          <div class="footer-col">
+            <h4>&nbsp;</h4>
+            <a href="#">Dúvidas frequentes</a>
+            <a href="#">Taxas e prazos</a>
+            <a href="#">Loja de corações</a>
+            <a href="#">Vakinha Premiada</a>
+            <a href="#">Blog do Vakinha</a>
+            <a href="#">Segurança e transparência</a>
+            <a href="#">Busca por recibo</a>
+          </div>
+          <div class="footer-col">
+            <h4>Fale conosco</h4>
+            <a href="#">Clique aqui para falar conosco</a>
+            <img src="img/selo_seguranca.webp" alt="Selo de Segurança" style="margin-top:10px; max-width:120px;">
+          </div>
+          <div class="footer-col">
+            <h4>Baixe nosso App</h4>
+            <a href="#"><img src="img/google_play.svg" alt="Google Play" style="max-width:140px; display:block; margin-bottom:10px;"></a>
+            <a href="#"><img src="img/apple_store.svg" alt="Apple Store" style="max-width:140px;"></a>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        © 2025 - Todos direitos reservados
+      </div>
+    </footer>
   </div>
-
-  <!-- CONTEÚDO -->
-  <div class="container">
-    <div class="img-box">
-      <img src="sua-imagem.jpg" alt="Imagem da campanha">
-    </div>
-
-    <div class="progress">
-      <div class="progress-bar">
-        <div class="progress-fill"></div>
-      </div>
-      <p class="value">R$ 1.924,55 de R$ 6.000,00 (33,27%)</p>
-    </div>
-
-    <h2>🙏 Olá, meu nome é Ana Paula, tenho 41 anos</h2>
-    <p>
-      Em 2022 enfrentei um câncer de mama e terminei o tratamento em 2024.  
-      Infelizmente, este ano fui diagnosticada com <strong>metástase óssea</strong>, que atingiu meu osso da bacia.  
-      Precisei colocar uma prótese e, por orientação médica, não posso apoiar o pé no chão por 3 meses.  
-    </p>
-    <p>
-      Moro em um local de difícil acesso, com subida/descida íngreme, e para continuar indo ao hospital preciso construir um pequeno elevador de acesso.
-    </p>
-
-    <h3>Como será usado o valor arrecadado?</h3>
-    <ul>
-      <li>🛠️ Construção do elevador de acesso</li>
-      <li>🔌 Adequações elétricas e de segurança</li>
-      <li>🚐 Transporte para quimioterapia e consultas</li>
-      <li>💊 Medicamentos e curativos</li>
-      <li>♿ Equipamentos de apoio (cadeira de rodas, almofadas etc.)</li>
-    </ul>
-
-    <h3>Como você pode ajudar?</h3>
-    <p>Se 240 pessoas doarem R$100, consigo seguir o tratamento com segurança. 🙏</p>
-
-    <!-- BOTÕES DE VALORES -->
-    <div class="btn-grid">
-      <a href="checkout.php?valor=30" class="btn">R$30</a>
-      <a href="checkout.php?valor=40" class="btn">R$40</a>
-      <a href="checkout.php?valor=50" class="btn">R$50</a>
-      <a href="checkout.php?valor=60" class="btn">R$60</a>
-      <a href="checkout.php?valor=70" class="btn">R$70</a>
-      <a href="checkout.php?valor=80" class="btn">R$80</a>
-      <a href="checkout.php?valor=100" class="btn">R$100</a>
-      <a href="checkout.php?valor=150" class="btn">R$150</a>
-      <a href="checkout.php?valor=200" class="btn">R$200</a>
-      <a href="checkout.php?valor=300" class="btn">R$300</a>
-      <a href="checkout.php?valor=400" class="btn">R$400</a>
-      <a href="checkout.php?valor=500" class="btn">R$500</a>
-      <a href="checkout.php?valor=750" class="btn">R$750</a>
-      <a href="checkout.php?valor=1000" class="btn">R$1000</a>
-    </div>
-
-    <!-- BOTÃO DOAÇÃO ANÔNIMA -->
-    <a href="checkout.php?anonima=true" class="btn-anon">🙈 Fazer Doação Anônima</a>
-  </div>
-
-  <!-- RODAPÉ -->
-  <footer>
-    <div class="footer-top">
-      <!-- logo + redes sociais -->
-      <div class="footer-header">
-        <img src="https://i.ibb.co/PnPgF0w/photo-2025-08-22-03-06-52.jpg" alt="Vakinha Logo" style="max-height:40px;">
-        <div class="footer-social">
-          <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"></a>
-          <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968764.png" alt="Facebook"></a>
-          <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube"></a>
-        </div>
-      </div>
-
-      <!-- colunas -->
-      <div class="footer-content">
-        <div class="footer-col">
-          <h4>Links rápidos</h4>
-          <a href="#">Quem somos</a>
-          <a href="#">Vaquinhas</a>
-          <a href="#">Criar vaquinhas</a>
-          <a href="#">Login</a>
-          <a href="#">Vaquinhas mais amadas</a>
-          <a href="#">Política de privacidade</a>
-          <a href="#">Termos de uso</a>
-        </div>
-        <div class="footer-col">
-          <h4>&nbsp;</h4>
-          <a href="#">Dúvidas frequentes</a>
-          <a href="#">Taxas e prazos</a>
-          <a href="#">Loja de corações</a>
-          <a href="#">Vakinha Premiada</a>
-          <a href="#">Blog do Vakinha</a>
-          <a href="#">Segurança e transparência</a>
-          <a href="#">Busca por recibo</a>
-        </div>
-        <div class="footer-col">
-          <h4>Fale conosco</h4>
-          <a href="#">Clique aqui para falar conosco</a>
-          <img src="img/selo_seguranca.webp" alt="Selo de Segurança" style="margin-top:10px; max-width:120px;">
-        </div>
-        <div class="footer-col">
-          <h4>Baixe nosso App</h4>
-          <a href="#"><img src="img/google_play.svg" alt="Google Play" style="max-width:140px; display:block; margin-bottom:10px;"></a>
-          <a href="#"><img src="img/apple_store.svg" alt="Apple Store" style="max-width:140px;"></a>
-        </div>
-      </div>
-    </div>
-    <div class="copyright">
-      © 2025 - Todos direitos reservados
-    </div>
-  </footer>
 </body>
 </html>
