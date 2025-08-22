@@ -184,39 +184,24 @@
       margin: 0 8px;
       filter: brightness(0) invert(1);
     }
+
+    /* 2 COLUNAS FIXAS */
     .footer-content {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-    }
-    .footer-col {
-      flex: 1;
-      min-width: 180px;
-      margin: 1rem 0;
-    }
-    .grid-links {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 6px;
+      gap: 20px;
+      justify-content: center;
     }
+    .footer-col {
+      margin: 1rem 0;
+    }
+
     .copyright {
       background: #333;
       text-align: center;
       padding: 1rem;
       font-size: 14px;
       color: #bbb;
-    }
-
-    /* RESPONSIVO */
-    @media(max-width:500px) {
-      .footer-content {
-        flex-direction: column;
-        align-items: center;
-      }
-      .grid-links {
-        grid-template-columns: 1fr;
-      }
     }
   </style>
 </head>
@@ -310,10 +295,10 @@
       </div>
 
       <div class="footer-content">
-        <!-- LINKS RÁPIDOS -->
-        <div class="footer-col">
-          <h4>Links rápidos</h4>
-          <div class="grid-links">
+        <!-- COLUNA 1 -->
+        <div>
+          <div class="footer-col">
+            <h4>Links rápidos</h4>
             <a href="#">Quem somos</a>
             <a href="#">Vaquinhas</a>
             <a href="#">Criar vaquinhas</a>
@@ -322,12 +307,9 @@
             <a href="#">Política de privacidade</a>
             <a href="#">Termos de uso</a>
           </div>
-        </div>
 
-        <!-- AJUDA -->
-        <div class="footer-col">
-          <h4>Ajuda</h4>
-          <div class="grid-links">
+          <div class="footer-col">
+            <h4>Ajuda</h4>
             <a href="#">Dúvidas frequentes</a>
             <a href="#">Taxas e prazos</a>
             <a href="#">Loja de corações</a>
@@ -338,22 +320,23 @@
           </div>
         </div>
 
-        <!-- FALE CONOSCO -->
-        <div class="footer-col">
-          <h4>Fale conosco</h4>
-          <a href="#">Clique aqui para falar conosco</a>
-          <img src="https://i.ibb.co/fQ8qkL3/selo.png" alt="Selo de Segurança" style="margin-top:10px; max-width:120px;">
-        </div>
+        <!-- COLUNA 2 -->
+        <div>
+          <div class="footer-col">
+            <h4>Fale conosco</h4>
+            <a href="#">Clique aqui para falar conosco</a>
+            <img src="https://i.ibb.co/fQ8qkL3/selo.png" alt="Selo de Segurança" style="margin-top:10px; max-width:120px;">
+          </div>
 
-        <!-- APP -->
-        <div class="footer-col">
-          <h4>Baixe nosso App</h4>
-          <a href="https://play.google.com/store/apps/details?id=br.com.vakinha&hl=pt_BR" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play" style="max-width:140px; display:block; margin-bottom:10px;">
-          </a>
-          <a href="https://apps.apple.com/br/app/vakinha/id647184000" target="_blank">
-            <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Apple Store" style="max-width:140px;">
-          </a>
+          <div class="footer-col">
+            <h4>Baixe nosso App</h4>
+            <a href="https://play.google.com/store/apps/details?id=br.com.vakinha&hl=pt_BR" target="_blank">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play" style="max-width:140px; display:block; margin-bottom:10px;">
+            </a>
+            <a href="https://apps.apple.com/br/app/vakinha/id647184000" target="_blank">
+              <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Apple Store" style="max-width:140px;">
+            </a>
+          </div>
         </div>
       </div>
     </div>
