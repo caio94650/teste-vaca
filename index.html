@@ -13,7 +13,8 @@
       color: #333;
       line-height: 1.6;
     }
-    /* HEADER IGUAL AO VAKINHA */
+
+    /* HEADER RESPONSIVO */
     .topo {
       position: fixed;
       top: 0;
@@ -24,11 +25,11 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 8px 16px;
+      padding: 10px 16px;
       z-index: 1000;
     }
     .logo img {
-      max-height: 32px;
+      max-height: 30px;
     }
     .acoes {
       display: flex;
@@ -40,6 +41,7 @@
       height: 22px;
       cursor: pointer;
     }
+
     /* CONTEÚDO */
     .container {
       width: 95%;
@@ -81,6 +83,7 @@
       margin-top: 0;
       text-align: center;
     }
+
     /* BOTÕES */
     .btn-grid {
       display: grid;
@@ -117,7 +120,8 @@
     .btn-anon:hover {
       background: #333;
     }
-    /* RODAPÉ */
+
+    /* RODAPÉ RESPONSIVO */
     footer {
       background: #222;
       color: #fff;
@@ -172,9 +176,17 @@
       font-size: 14px;
       color: #bbb;
     }
+
+    /* RESPONSIVIDADE */
     @media(max-width:600px) {
+      .acoes {
+        gap: 10px;
+      }
       .footer-content {
         flex-direction: column;
+      }
+      .footer-col {
+        margin-right: 0;
       }
     }
   </style>
