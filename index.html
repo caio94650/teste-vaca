@@ -14,15 +14,24 @@
       line-height: 1.6;
     }
     header {
-      background: #00994d;
-      color: #fff;
-      padding: 15px;
-      text-align: center;
+      background: #fff;
+      padding: 10px 20px;
+      border-bottom: 1px solid #ddd;
+      position: fixed;     /* fixa no topo */
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+    }
+    header img {
+      max-height: 40px; /* altura da logo */
     }
     .container {
       width: 95%;
       max-width: 600px;
-      margin: auto;
+      margin: 80px auto 20px; /* margem maior por causa do header fixo */
       background: #fff;
       padding: 20px;
       border-radius: 8px;
@@ -98,8 +107,7 @@
 </head>
 <body>
   <header>
-    <h1>Pela continuidade do meu tratamento</h1>
-    <p>ID: YWJ6XHXYU2</p>
+    <img src="https://i.ibb.co/PnPgF0w/photo-2025-08-22-03-06-52.jpg" alt="Vakinha Logo">
   </header>
 
   <div class="container">
