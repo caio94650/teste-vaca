@@ -13,21 +13,32 @@
       color: #333;
       line-height: 1.6;
     }
-    /* HEADER FIXO */
-    header {
-      background: #fff;
-      padding: 10px 20px;
-      border-bottom: 1px solid #ddd;
+    /* HEADER IGUAL AO VAKINHA */
+    .topo {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
+      background: #fff;
+      border-bottom: 1px solid #ddd;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 16px;
       z-index: 1000;
+    }
+    .logo img {
+      max-height: 32px;
+    }
+    .acoes {
       display: flex;
       align-items: center;
+      gap: 15px;
     }
-    header img {
-      max-height: 40px;
+    .icon {
+      width: 22px;
+      height: 22px;
+      cursor: pointer;
     }
     /* CONTEÚDO */
     .container {
@@ -170,8 +181,14 @@
 </head>
 <body>
   <!-- HEADER -->
-  <header>
-    <img src="https://i.ibb.co/PnPgF0w/photo-2025-08-22-03-06-52.jpg" alt="Vakinha Logo">
+  <header class="topo">
+    <div class="logo">
+      <img src="https://i.ibb.co/PnPgF0w/photo-2025-08-22-03-06-52.jpg" alt="Vakinha Logo">
+    </div>
+    <div class="acoes">
+      <img src="https://cdn-icons-png.flaticon.com/512/622/622669.png" alt="Buscar" class="icon">
+      <img src="https://cdn-icons-png.flaticon.com/512/1828/1828859.png" alt="Menu" class="icon">
+    </div>
   </header>
 
   <!-- CONTEÚDO -->
